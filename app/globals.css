@@ -9,6 +9,7 @@
   --blue-btn: #2aa4e8;
   --blue-btn-hover: #1d93d6;
   --ink: #1d1d1f;
+  --ink-soft: #363638;
   --cream: #faf7f2;
   --pink: #ff4d8d;
   --pink-deep: #e83d7a;
@@ -24,6 +25,7 @@
   --color-blue: var(--blue);
   --color-blue-btn: var(--blue-btn);
   --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
   --color-cream: var(--cream);
   --color-pink: var(--pink);
   --color-pink-deep: var(--pink-deep);

@@ -30,7 +30,7 @@ export default function Home() {
         </h2>
       </section>
 
-      <section id="season" className="bg-sky px-6 py-24 md:py-28">
+      <section id="season" className="bg-cream px-6 py-24 md:py-28">
         <div className="mx-auto max-w-[980px]">
           <h2 className="text-center text-[40px] font-bold tracking-[-0.04em] text-ink sm:text-[48px]">
             The season
@@ -61,11 +61,11 @@ export default function Home() {
           Inquire
         </h2>
         <p className="mt-3 text-[21px] font-medium tracking-tight text-ink/55">
-          U16 travel. 2027.
+          U16. 2027.
         </p>
         <a
           href={`mailto:${clubEmail}`}
-          className="mt-8 inline-flex h-12 items-center rounded-full bg-ink px-6 text-[17px] font-medium text-white transition-opacity hover:opacity-85"
+          className="mt-8 inline-flex h-12 items-center rounded-full bg-white px-6 text-[17px] font-bold text-ink-soft transition-opacity hover:opacity-85"
         >
           {clubEmail}
         </a>

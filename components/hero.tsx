@@ -8,12 +8,12 @@ export function Hero() {
           <p className="hero-line hero-line-1 mb-4 text-[17px] font-semibold tracking-tight text-pink">
             Soft Serve Volley Club
           </p>
-          <h1 className="hero-line hero-line-2 font-bold leading-[0.9] tracking-[-0.05em] text-ink">
+          <h1 className="hero-line hero-line-2 font-bold leading-[0.9] tracking-[-0.05em] text-ink-soft">
             <span className="block text-[72px] sm:text-[96px] lg:text-[112px]">
               2027
             </span>
             <span className="mt-1 block text-[40px] sm:text-[56px] lg:text-[64px]">
-              season
+              club season
             </span>
           </h1>
           <p className="hero-line hero-line-5 mx-auto mt-6 max-w-sm text-[22px] font-medium leading-8 tracking-[-0.02em] text-ink/70 md:mx-0 sm:text-[24px] sm:leading-9">
