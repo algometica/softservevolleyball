@@ -5,7 +5,7 @@ import { clubEmail } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Policies",
   description:
-    "Refund, complaint, code of conduct, conflict of interest, and safe sport policies for Soft Serve Volleyball Club.",
+    "Refund, complaint, code of conduct, conflict of interest, and safe sport policies for Soft Serve Volley Club.",
 };
 
 const sections = [
@@ -51,7 +51,7 @@ export default function PoliciesPage() {
             The club
           </h2>
           <p className="mt-6 text-[17px] leading-8 text-white/65">
-            Soft Serve Volleyball Club is a youth club preparing for the 2027
+            Soft Serve Volley Club is a youth club preparing for the 2027
             indoor club season. Our organizational status will appear on the
             Volleyball BC club listing.
           </p>

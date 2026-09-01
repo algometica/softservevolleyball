@@ -6,17 +6,17 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://softservevolleyclub.ca"),
   title: {
-    default: "Soft Serve Volleyball Club",
-    template: "%s · Soft Serve Volleyball Club",
+    default: "Soft Serve Volley Club",
+    template: "%s · Soft Serve Volley Club",
   },
   description:
-    "U16 travel team. 2027 season. Developing youth for athletic performance. A Volleyball BC member club.",
-  applicationName: "Soft Serve Volleyball Club",
+    "U16 travel team. 2027 season. Developing youth for athletic performance.",
+  applicationName: "Soft Serve Volley Club",
   openGraph: {
-    title: "Soft Serve Volleyball Club",
-    description: "U16. 2027 season. Travel team.",
+    title: "Soft Serve Volley Club",
+    description: "2027 season. U16 travel team.",
     url: "https://softservevolleyclub.ca",
-    siteName: "Soft Serve Volleyball Club",
+    siteName: "Soft Serve Volley Club",
     locale: "en_CA",
     type: "website",
   },

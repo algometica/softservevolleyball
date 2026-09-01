@@ -1,5 +1,5 @@
 export const clubEmail = "hello@softservevolleyclub.ca";
-export const clubName = "Soft Serve Volleyball Club";
+export const clubName = "Soft Serve Volley Club";
 
 export const navLinks = [
   { href: "/#team", label: "Team" },

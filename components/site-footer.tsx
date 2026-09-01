@@ -13,7 +13,7 @@ export function SiteFooter() {
             height={36}
             className="h-9 w-9 object-contain"
           />
-          <p className="text-[12px] text-white/55">Soft Serve Volleyball Club</p>
+          <p className="text-[12px] text-white/55">Soft Serve Volley Club</p>
         </div>
         <Link
           href="/policies"
