@@ -10,11 +10,18 @@ export const metadata: Metadata = {
     template: "%s · Soft Serve Volley Club",
   },
   description:
-    "U16 travel team. 2027 season. Developing youth for athletic performance.",
+    "U16 club team. 2027 season. Developing youth for athletic performance.",
   applicationName: "Soft Serve Volley Club",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
+  },
   openGraph: {
     title: "Soft Serve Volley Club",
-    description: "2027 season. U16 travel team.",
+    description: "2027 season. U16 club team.",
     url: "https://softservevolleyclub.ca",
     siteName: "Soft Serve Volley Club",
     locale: "en_CA",

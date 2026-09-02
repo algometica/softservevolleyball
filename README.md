@@ -1,6 +1,6 @@
 # Soft Serve Volley Club
 
-Site for the U16 travel team, 2027 season. [softservevolleyclub.ca](https://softservevolleyclub.ca)
+Site for the U16 club team, 2027 season. [softservevolleyclub.ca](https://softservevolleyclub.ca)
 
 Developing youth for athletic performance.
 

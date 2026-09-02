@@ -26,7 +26,7 @@ export default function Home() {
         className="flex min-h-[42vh] items-center justify-center bg-ink px-6 py-24 text-center text-white"
       >
         <h2 className="text-[40px] font-bold tracking-[-0.04em] sm:text-[56px]">
-          U16 Travel team
+          U16 club team
         </h2>
       </section>
 

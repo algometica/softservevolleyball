@@ -56,7 +56,7 @@ export default function PoliciesPage() {
             Volleyball BC club listing.
           </p>
           <p className="mt-5 text-[17px] leading-8 text-white/65">
-            The U16 travel team is the program we register and sanction with
+            The U16 club team is the program we register and sanction with
             Volleyball BC. All athletes and team staff on that team register as
             Volleyball BC members. We do not currently run other programs
             outside that sanctioning.
