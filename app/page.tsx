@@ -3,16 +3,16 @@ import { clubEmail } from "@/lib/site";
 
 const pillars = [
   {
-    title: "Club",
-    copy: "One roster. High level.",
+    title: "Team",
+    copy: "One roster. Disciplined athletes committed to competitive excellence.",
   },
   {
-    title: "Training",
-    copy: "Personalized performance training.",
+    title: "Peak performance",
+    copy: "High level skill refinement paired with athletic conditioning to build the best skill set.",
   },
   {
     title: "Travel",
-    copy: "Engaging in high level tournaments.",
+    copy: "High-exposure competition to test athletes at the highest level.",
   },
 ] as const;
 
