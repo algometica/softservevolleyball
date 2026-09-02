@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { navLinks } from "@/lib/site";
+import { InstagramIcon } from "@/components/instagram-icon";
+import { instagramUrl, navLinks } from "@/lib/site";
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
@@ -35,6 +36,17 @@ export function SiteHeader() {
           <span className="font-semibold tracking-tight">Soft Serve</span>
         </Link>
         <ul className="flex items-center gap-5 sm:gap-7">
+          <li>
+            <a
+              href={instagramUrl}
+              aria-label="Instagram"
+              target="_blank"
+              rel="noreferrer"
+              className="flex text-ink/55 transition-colors hover:text-ink"
+            >
+              <InstagramIcon className="h-3.5 w-3.5" />
+            </a>
+          </li>
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link
