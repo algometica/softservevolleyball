@@ -1,5 +1,19 @@
+import Image from "next/image";
 import { Hero } from "@/components/hero";
-import { clubEmail } from "@/lib/site";
+import { clubEmail, sectionEyebrowClass, sectionTitleClass } from "@/lib/site";
+
+const coaches = [
+  {
+    name: "Jaida",
+    src: "/coach-jaida.jpg",
+    alt: "U16 Coach Jaida, Soft Serve Volley Club",
+  },
+  {
+    name: "Nicole",
+    src: "/coach-nicole.jpg",
+    alt: "U16 Coach Nicole, Soft Serve Volley Club",
+  },
+] as const;
 
 const pillars = [
   {
@@ -25,17 +39,39 @@ export default function Home() {
         id="team"
         className="flex min-h-[42vh] flex-col items-center justify-center bg-ink px-6 py-24 text-center text-white"
       >
-        <p className="text-[17px] font-semibold tracking-tight text-pink">
-          Soft Serve Volley Club
-        </p>
-        <h2 className="mt-3 text-[40px] font-bold tracking-[-0.04em] sm:text-[56px]">
-          Club Teams
-        </h2>
+        <p className={sectionEyebrowClass}>Soft Serve Volley Club</p>
+        <h2 className={`mt-3 ${sectionTitleClass}`}>Club Teams</h2>
+      </section>
+
+      <section id="coaches" className="bg-white px-6 py-24 md:py-28">
+        <div className="mx-auto max-w-[980px]">
+          <p className={`text-center ${sectionEyebrowClass}`}>2026 / 2027</p>
+          <h2 className={`mt-2 text-center text-ink ${sectionTitleClass}`}>
+            Coaches
+          </h2>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 sm:gap-6">
+            {coaches.map((coach) => (
+              <article
+                key={coach.name}
+                className="overflow-hidden rounded-3xl bg-cream"
+              >
+                <Image
+                  src={coach.src}
+                  alt={coach.alt}
+                  width={1024}
+                  height={1024}
+                  className="h-auto w-full"
+                  sizes="(min-width: 640px) 470px, 100vw"
+                />
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section id="season" className="bg-cream px-6 py-24 md:py-28">
         <div className="mx-auto max-w-[980px]">
-          <h2 className="text-center text-[40px] font-bold tracking-[-0.04em] text-ink sm:text-[48px]">
+          <h2 className={`text-center text-ink ${sectionTitleClass}`}>
             The season
           </h2>
           <div className="mt-12 grid gap-4 md:grid-cols-3">
@@ -60,9 +96,7 @@ export default function Home() {
         id="contact"
         className="flex flex-col items-center bg-pink-band px-6 py-24 text-center text-ink md:py-28"
       >
-        <h2 className="text-[48px] font-bold tracking-[-0.04em] sm:text-[56px]">
-          Inquire
-        </h2>
+        <h2 className={sectionTitleClass}>Inquire</h2>
         <p className="mt-3 text-[21px] font-medium tracking-tight text-ink/55">
           2027.
         </p>

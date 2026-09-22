@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { ClinicCta } from "@/components/clinic-cta";
+import { sectionEyebrowClass } from "@/lib/site";
 
 export function Hero() {
   return (
     <section className="hero relative flex min-h-[100svh] flex-col justify-center overflow-hidden bg-cream px-6 pb-20 pt-24">
       <div className="relative z-10 mx-auto grid w-full max-w-[1080px] items-center gap-6 md:grid-cols-2 md:gap-10">
         <div className="order-2 text-center md:order-1 md:text-left">
-          <p className="hero-line hero-line-1 mb-4 text-[17px] font-semibold tracking-tight text-pink">
+          <p className={`hero-line hero-line-1 mb-4 ${sectionEyebrowClass}`}>
             Soft Serve Volley Club
           </p>
           <h1 className="hero-line hero-line-2 font-bold leading-[0.9] tracking-[-0.05em] text-ink-soft">

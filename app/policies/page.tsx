@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { clubEmail } from "@/lib/site";
+import { clubEmail, sectionEyebrowClass, sectionTitleClass } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Policies",
@@ -21,12 +21,8 @@ export default function PoliciesPage() {
   return (
     <main className="bg-cream">
       <section className="px-6 pb-16 pt-28 text-center md:pt-32">
-        <p className="text-[17px] font-semibold tracking-tight text-pink">
-          Volleyball BC
-        </p>
-        <h1 className="mt-3 text-[48px] font-semibold tracking-[-0.035em] text-ink sm:text-[64px]">
-          Policies
-        </h1>
+        <p className={sectionEyebrowClass}>Volleyball BC</p>
+        <h1 className={`mt-3 text-ink ${sectionTitleClass}`}>Policies</h1>
         <p className="mx-auto mt-5 max-w-xl text-[19px] leading-8 text-muted">
           Posted for athletes and families before they join. We uphold the
           Volleyball BC Code of Conduct and Ethics and supporting policies.
@@ -47,9 +43,7 @@ export default function PoliciesPage() {
 
       <section className="bg-ink px-6 py-20 text-white md:py-24">
         <div className="mx-auto max-w-[680px]">
-          <h2 className="text-[32px] font-semibold tracking-[-0.03em] sm:text-[40px]">
-            The club
-          </h2>
+          <h2 className={sectionTitleClass}>The club</h2>
           <p className="mt-6 text-[17px] leading-8 text-white/65">
             Soft Serve Volley Club is a youth club preparing for the 2027
             indoor club season. Our organizational status will appear on the
@@ -323,12 +317,8 @@ function PolicyBlock({
   return (
     <section id={id} className={`${background} px-6 py-20 md:py-24`}>
       <div className="mx-auto max-w-[680px]">
-        <p className="text-[15px] font-semibold tracking-tight text-pink">
-          {eyebrow}
-        </p>
-        <h2 className="mt-2 text-[32px] font-semibold tracking-[-0.03em] text-ink sm:text-[40px]">
-          {title}
-        </h2>
+        <p className={sectionEyebrowClass}>{eyebrow}</p>
+        <h2 className={`mt-2 text-ink ${sectionTitleClass}`}>{title}</h2>
         <div className="policy-copy mt-6">{children}</div>
       </div>
     </section>

@@ -4,7 +4,7 @@ import Link from "next/link";
 export function SiteFooter() {
   return (
     <footer className="bg-ink">
-      <div className="mx-auto flex max-w-[980px] items-center justify-between px-6 py-8">
+      <div className="mx-auto flex max-w-[980px] flex-wrap items-center justify-between gap-x-4 gap-y-2 px-6 py-8">
         <div className="flex items-center gap-3">
           <Image
             src="/ssv-logo.png"
@@ -13,7 +13,9 @@ export function SiteFooter() {
             height={36}
             className="h-9 w-9 object-contain"
           />
-          <p className="text-[12px] text-white/55">Soft Serve Volley Club</p>
+          <p className="text-[12px] text-white/55">
+            © {new Date().getFullYear()} Soft Serve Volley Club
+          </p>
         </div>
         <Link
           href="/policies"

@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ClinicCta } from "@/components/clinic-cta";
-import { clinic, clinicRegisterUrl, clubName, siteUrl } from "@/lib/site";
+import {
+  clinic,
+  clinicRegisterUrl,
+  clubName,
+  sectionEyebrowClass,
+  sectionTitleClass,
+  siteUrl,
+} from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "2 Day Clinic in South Surrey",
@@ -35,10 +42,8 @@ export default function ClinicPage() {
     <main className="clinic-page relative overflow-hidden px-6 pb-24 pt-24">
       <div className="clinic-glow" aria-hidden="true" />
       <div className="relative z-10 mx-auto flex max-w-[640px] flex-col items-center text-center">
-        <p className="text-[15px] font-semibold tracking-tight text-pink">
-          {clubName}
-        </p>
-        <h1 className="mt-3 text-[40px] font-bold leading-[0.95] tracking-[-0.045em] text-white sm:text-[56px]">
+        <p className={sectionEyebrowClass}>{clubName}</p>
+        <h1 className={`mt-3 leading-[0.95] text-white ${sectionTitleClass}`}>
           {clinic.headline}
         </h1>
         <p className="mt-5 max-w-md text-[19px] leading-8 text-white/70">

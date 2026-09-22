@@ -4,8 +4,14 @@ export const siteUrl = "https://softservevolleyclub.ca";
 export const instagramUrl = "https://www.instagram.com/softservevolleyclub";
 export const clinicRegisterUrl = "https://forms.gle/JkUCnTrKQBxZBiRd7";
 
+export const sectionTitleClass =
+  "text-[40px] font-bold tracking-[-0.04em] sm:text-[56px]";
+export const sectionEyebrowClass =
+  "text-[17px] font-semibold tracking-tight text-pink";
+
 export const navLinks = [
   { href: "/#team", label: "Team" },
+  { href: "/#coaches", label: "Coaches" },
   { href: "/#season", label: "Season" },
   { href: "/#contact", label: "Contact" },
 ] as const;
