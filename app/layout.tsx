@@ -8,7 +8,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Soft Serve Volley Club | U16 Club Team in Surrey BC",
+    default: "Soft Serve Volley Club | High Level youth volleyball training in Surrey BC",
     template: `%s · ${clubName}`,
   },
   description:

@@ -29,7 +29,7 @@ export default function Home() {
           Soft Serve Volley Club
         </p>
         <h2 className="mt-3 text-[40px] font-bold tracking-[-0.04em] sm:text-[56px]">
-          U16 club team
+          Club Teams
         </h2>
       </section>
 
