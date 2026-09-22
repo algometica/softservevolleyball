@@ -4,7 +4,7 @@ import { clubEmail } from "@/lib/site";
 const pillars = [
   {
     title: "Team",
-    copy: "One roster. Disciplined athletes committed to competitive excellence.",
+    copy: "Disciplined athletes committed to competitive excellence.",
   },
   {
     title: "Peak performance",
@@ -23,9 +23,12 @@ export default function Home() {
 
       <section
         id="team"
-        className="flex min-h-[42vh] items-center justify-center bg-ink px-6 py-24 text-center text-white"
+        className="flex min-h-[42vh] flex-col items-center justify-center bg-ink px-6 py-24 text-center text-white"
       >
-        <h2 className="text-[40px] font-bold tracking-[-0.04em] sm:text-[56px]">
+        <p className="text-[17px] font-semibold tracking-tight text-pink">
+          Soft Serve Volley Club
+        </p>
+        <h2 className="mt-3 text-[40px] font-bold tracking-[-0.04em] sm:text-[56px]">
           U16 club team
         </h2>
       </section>
@@ -61,7 +64,7 @@ export default function Home() {
           Inquire
         </h2>
         <p className="mt-3 text-[21px] font-medium tracking-tight text-ink/55">
-          U16. 2027.
+          2027.
         </p>
         <a
           href={`mailto:${clubEmail}`}

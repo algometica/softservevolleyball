@@ -136,6 +136,44 @@ body {
   margin-top: 0;
 }
 
+.cta-clinic {
+  background: #ff4d8d;
+  color: #ffffff;
+  box-shadow: 0 10px 28px rgba(255, 77, 141, 0.38);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.cta-clinic:hover {
+  background: #ff6a9d;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(255, 77, 141, 0.48);
+}
+
+.clinic-page {
+  min-height: 100svh;
+  background: #0c0c0d;
+}
+
+.clinic-glow {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(255, 77, 141, 0.28) 0%,
+      rgba(255, 77, 141, 0) 52%
+    ),
+    radial-gradient(
+      ellipse at 80% 80%,
+      rgba(42, 164, 232, 0.12) 0%,
+      rgba(42, 164, 232, 0) 40%
+    );
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-line,
   .hero-logo {

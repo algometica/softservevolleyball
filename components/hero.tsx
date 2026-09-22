@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ClinicCta } from "@/components/clinic-cta";
 
 export function Hero() {
   return (
@@ -19,6 +20,14 @@ export function Hero() {
           <p className="hero-line hero-line-5 mx-auto mt-6 max-w-sm text-[22px] font-medium leading-8 tracking-[-0.02em] text-ink/70 md:mx-0 sm:text-[24px] sm:leading-9">
             Developing youth for athletic performance.
           </p>
+          <div className="hero-line hero-line-5 mt-8">
+            <div className="inline-flex flex-col items-center gap-2">
+              <ClinicCta href="/clinic">Join the 2 day clinic</ClinicCta>
+              <p className="text-center text-[13px] font-semibold tracking-tight text-pink">
+                Limited spots. Nov 15 and 22.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="relative order-1 mx-auto w-full max-w-[420px] md:order-2 md:max-w-[480px]">
