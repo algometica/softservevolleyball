@@ -1,19 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Hero } from "@/components/hero";
-import { clubEmail, sectionEyebrowClass, sectionTitleClass } from "@/lib/site";
-
-const coaches = [
-  {
-    name: "Jaida",
-    src: "/coach-jaida.jpg",
-    alt: "U16 Coach Jaida, Soft Serve Volley Club",
-  },
-  {
-    name: "Nicole",
-    src: "/coach-nicole.jpg",
-    alt: "U16 Coach Nicole, Soft Serve Volley Club",
-  },
-] as const;
+import {
+  clubEmail,
+  coaches,
+  sectionEyebrowClass,
+  sectionTitleClass,
+} from "@/lib/site";
 
 const pillars = [
   {
@@ -41,6 +34,29 @@ export default function Home() {
       >
         <p className={sectionEyebrowClass}>Soft Serve Volley Club</p>
         <h2 className={`mt-3 ${sectionTitleClass}`}>Club Teams</h2>
+        <div className="mt-14 grid w-full max-w-[720px] gap-4 sm:grid-cols-2">
+          <div className="rounded-3xl bg-white/8 px-8 py-12 text-left">
+            <p className="text-[15px] font-semibold tracking-tight text-pink">
+              2026/2027
+            </p>
+            <h3 className="mt-2 text-[40px] font-bold tracking-[-0.04em]">
+              U13
+            </h3>
+            <p className="mt-3 text-[17px] text-white/45">Coming soon</p>
+          </div>
+          <Link
+            href="/u16"
+            className="rounded-3xl bg-white px-8 py-12 text-left text-ink transition-opacity hover:opacity-90"
+          >
+            <p className="text-[15px] font-semibold tracking-tight text-pink">
+              2026/2027
+            </p>
+            <h3 className="mt-2 text-[40px] font-bold tracking-[-0.04em]">
+              U16
+            </h3>
+            <p className="mt-3 text-[17px] text-ink/55">View the team</p>
+          </Link>
+        </div>
       </section>
 
       <section id="coaches" className="bg-white px-6 py-24 md:py-28">
@@ -49,7 +65,7 @@ export default function Home() {
           <h2 className={`mt-2 text-center text-ink ${sectionTitleClass}`}>
             Coaches
           </h2>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 sm:gap-6">
+          <div className="mt-12 grid gap-5 sm:grid-cols-3 sm:gap-6">
             {coaches.map((coach) => (
               <article
                 key={coach.name}
