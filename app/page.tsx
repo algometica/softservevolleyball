@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Hero } from "@/components/hero";
 import {
   clubEmail,
+  clubName,
   coaches,
   sectionEyebrowClass,
   sectionTitleClass,
@@ -32,7 +33,7 @@ export default function Home() {
         id="team"
         className="flex min-h-[42vh] flex-col items-center justify-center bg-ink px-6 py-24 text-center text-white"
       >
-        <p className={sectionEyebrowClass}>Soft Serve Volley Club</p>
+        <p className={sectionEyebrowClass}>{clubName}</p>
         <h2 className={`mt-3 ${sectionTitleClass}`}>Club Teams</h2>
         <div className="mt-14 grid w-full max-w-[720px] gap-4 sm:grid-cols-2">
           <div className="rounded-3xl bg-white/8 px-8 py-12 text-left">

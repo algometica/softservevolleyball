@@ -5,7 +5,7 @@ import { clubEmail, sectionEyebrowClass, sectionTitleClass } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Policies",
   description:
-    "Refund, complaint, code of conduct, conflict of interest, and safe sport policies for Soft Serve Volley Club.",
+    "Refund, complaint, code of conduct, conflict of interest, and safe sport policies for Super Nova Volleyball Club.",
 };
 
 const sections = [
@@ -45,7 +45,7 @@ export default function PoliciesPage() {
         <div className="mx-auto max-w-[680px]">
           <h2 className={sectionTitleClass}>The club</h2>
           <p className="mt-6 text-[17px] leading-8 text-white/65">
-            Soft Serve Volley Club is a youth club preparing for the 2027
+            Super Nova Volleyball Club is a youth club preparing for the 2027
             indoor club season. Our organizational status will appear on the
             Volleyball BC club listing.
           </p>

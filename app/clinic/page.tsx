@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   description: `${clubName} 2 day volleyball clinic. Serve, set, hit, repeat. ${clinic.dates}, ${clinic.time}, ${clinic.location}. ${clinic.ages}. Limited spots.`,
   alternates: { canonical: `${siteUrl}/clinic` },
   keywords: [
-    "Soft Serve Volley Club",
-    "Soft Serve Volleyball Club",
+    "Super Nova Volleyball Club",
+    "Super Nova Volley Club",
     "volleyball clinic South Surrey",
     "U15 U16 volleyball clinic",
     "club tryout prep",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: `${clubName} 2 day clinic`,
     description: `Get ready for club tryouts. ${clinic.dates} in ${clinic.location}.`,
     url: `${siteUrl}/clinic`,
-    images: [{ url: "/clinic-flyer.jpg", width: 576, height: 1024 }],
+    images: [{ url: "/clinic-flyer.jpg", width: 819, height: 1024 }],
     type: "website",
   },
 };
@@ -77,7 +77,7 @@ export default function ClinicPage() {
         <Image
           src="/clinic-flyer.jpg"
           alt={`${clubName} Serve Set Hit Repeat clinic flyer. ${clinic.location}. ${clinic.dates}, ${clinic.time}. ${clinic.ages}.`}
-          width={576}
+          width={819}
           height={1024}
           priority
           className="mt-12 h-auto w-full max-w-[440px] rounded-2xl shadow-[0_24px_80px_rgba(0,0,0,0.45)]"

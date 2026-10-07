@@ -1,7 +1,7 @@
-export const clubEmail = "hello@softservevolleyclub.ca";
-export const clubName = "Soft Serve Volley Club";
-export const siteUrl = "https://softservevolleyclub.ca";
-export const instagramUrl = "https://www.instagram.com/softservevolleyclub";
+export const clubEmail = "hello@supernovavolleyballclub.ca";
+export const clubName = "Super Nova Volleyball Club";
+export const siteUrl = "https://supernovavolleyballclub.ca";
+export const instagramUrl = "https://www.instagram.com/supernovavolleyballclub";
 export const clinicRegisterUrl = "https://forms.gle/JkUCnTrKQBxZBiRd7";
 
 export const sectionTitleClass =
@@ -36,19 +36,19 @@ export const coaches = [
   {
     name: "Jaida",
     src: "/u16-jaida.jpg",
-    alt: "Coach Jaida, Soft Serve Volley Club",
+    alt: "Coach Jaida, Super Nova Volleyball Club",
     bio: "Sport science professional with 11-plus years of volleyball and 4 years of youth coaching. Multiple NCCP certifications. Head and assistant coach with West Coach Volleyball Club, developing U15 to U18 athletes. Youth sport programming with the City of Langley and the Township of Langley.",
   },
   {
     name: "Nicole",
     src: "/u16-nicole.jpg",
-    alt: "Coach Nicole, Soft Serve Volley Club",
+    alt: "Coach Nicole, Super Nova Volleyball Club",
     bio: "11-plus years of volleyball across school, club, and adult leagues. 3.5 years as an assistant coach with junior and senior girls teams. First Aid, CPR, and concussion training.",
   },
   {
     name: "Tomáš",
     src: "/coach-tomas.jpg",
-    alt: "Coach Tomáš, Soft Serve Volley Club",
-    bio: "From Prague, Czech Republic. Tomáš brings elite European technical training to Soft Serve: ball-handling precision, spatial awareness, and an international view of the game.",
+    alt: "Coach Tomáš, Super Nova Volleyball Club",
+    bio: "From Prague, Czech Republic. Tomáš brings elite European technical training to Super Nova: ball-handling precision, spatial awareness, and an international view of the game.",
   },
 ] as const;

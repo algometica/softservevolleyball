@@ -9,16 +9,16 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default:
-      "Soft Serve Volley Club | High-level youth volleyball training in South Surrey, BC",
+      `${clubName} | High-level youth volleyball training in South Surrey, BC`,
     template: `%s · ${clubName}`,
   },
   description:
-    "Soft Serve Volley Club is a U16 club team in Surrey, BC. 2027 club season.",
+    `${clubName} is a U16 club team in South Surrey, BC. 2027 club season.`,
   applicationName: clubName,
   keywords: [
-    "Soft Serve Volley Club",
-    "Soft Serve Volleyball Club",
-    "SSV volleyball",
+    "Super Nova Volleyball Club",
+    "Super Nova Volley Club",
+    "Supernova volleyball",
     "U16 volleyball Surrey",
     "volleyball club South Surrey",
     "Volleyball BC club",
@@ -33,20 +33,20 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
   },
   openGraph: {
-    title: "Soft Serve Volley Club",
+    title: clubName,
     description:
-      "U16 club team. 2027 club season. Surrey, BC.",
+      "U16 club team. 2027 club season. South Surrey, BC.",
     url: siteUrl,
     siteName: clubName,
     locale: "en_CA",
     type: "website",
-    images: [{ url: "/ssv-logo.png", width: 720, height: 720 }],
+    images: [{ url: "/snv-logo.png", width: 1024, height: 1024 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Soft Serve Volley Club",
-    description: "U16 club team. 2027 club season. Surrey, BC.",
-    images: ["/ssv-logo.png"],
+    title: clubName,
+    description: "U16 club team. 2027 club season. South Surrey, BC.",
+    images: ["/snv-logo.png"],
   },
 };
 

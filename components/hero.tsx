@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ClinicCta } from "@/components/clinic-cta";
-import { sectionEyebrowClass } from "@/lib/site";
+import { clubName, sectionEyebrowClass } from "@/lib/site";
 
 export function Hero() {
   return (
@@ -8,7 +8,7 @@ export function Hero() {
       <div className="relative z-10 mx-auto grid w-full max-w-[1080px] items-center gap-6 md:grid-cols-2 md:gap-10">
         <div className="order-2 text-center md:order-1 md:text-left">
           <p className={`hero-line hero-line-1 mb-4 ${sectionEyebrowClass}`}>
-            Soft Serve Volley Club
+            {clubName}
           </p>
           <h1 className="hero-line hero-line-2 font-bold leading-[0.9] tracking-[-0.05em] text-ink-soft">
             <span className="block text-[72px] sm:text-[96px] lg:text-[112px]">
@@ -37,8 +37,8 @@ export function Hero() {
             <div className="hero-glow hero-glow-blue" />
           </div>
           <Image
-            src="/ssv-logo.png"
-            alt="Soft Serve Volley Club"
+            src="/snv-logo.png"
+            alt={clubName}
             width={720}
             height={720}
             sizes="(min-width: 768px) 480px, 80vw"

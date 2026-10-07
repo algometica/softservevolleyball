@@ -32,14 +32,14 @@ export function SiteHeader() {
       <nav className="mx-auto flex h-full max-w-[980px] items-center justify-between px-6">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/ssv-logo.png"
+            src="/snv-mark.png"
             alt=""
             width={28}
             height={28}
             className="h-7 w-7 object-contain"
           />
           <span className="hidden font-semibold tracking-tight sm:inline">
-            Soft Serve
+            Super Nova
           </span>
         </Link>
         <ul className="flex shrink-0 items-center gap-2 sm:gap-7">

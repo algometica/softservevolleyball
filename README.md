@@ -1,8 +1,8 @@
-# Soft Serve Volley Club
+# Super Nova Volleyball Club
 
-Site for the U16 club team, 2027 season. [softservevolleyclub.ca](https://softservevolleyclub.ca)
+Site for the U16 club team, 2027 season. [supernovavolleyballclub.ca](https://supernovavolleyballclub.ca)
 
-U16 club team in Surrey, BC.
+U16 club team in South Surrey, BC.
 
 ## Stack
 
@@ -25,13 +25,15 @@ npm run start
 ## Pages
 
 - `/` team, season, inquire
+- `/u16` U16 club team
+- `/clinic` 2 day clinic
 - `/policies` club policies for Volleyball BC (linked from the footer)
 
 ## Deploy
 
 1. Import `algometica/softservevolleyball` in [Vercel](https://vercel.com/new). Framework: Next.js. Deploy.
-2. Project → Settings → Domains. Add `softservevolleyclub.ca`. Accept the `www` redirect if Vercel offers it.
-3. Copy the records from that domain card. Then in Namecheap: Domain List → Manage `softservevolleyclub.ca` → **Advanced DNS**.
+2. Project → Settings → Domains. Add `supernovavolleyballclub.ca`. Accept the `www` redirect if Vercel offers it.
+3. Copy the records from that domain card. Then in Namecheap: Domain List → Manage `supernovavolleyballclub.ca` → **Advanced DNS**.
 
 Keep Namecheap BasicDNS. Do not switch to Vercel nameservers unless you also want Vercel to host email DNS later.
 
