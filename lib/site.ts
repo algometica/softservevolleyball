@@ -1,8 +1,10 @@
 export const clubEmail = "hello@supernovavolleyballclub.ca";
+export const paymentsEmail = "payments@supernovavolleyballclub.ca";
 export const clubName = "Super Nova Volleyball Club";
 export const siteUrl = "https://supernovavolleyballclub.ca";
 export const instagramUrl = "https://www.instagram.com/supernovavolleyballclub";
 export const clinicRegisterUrl = "https://forms.gle/JkUCnTrKQBxZBiRd7";
+export const tryoutFormUrl = "https://forms.gle/h6WPFHts9xxopxDAA";
 
 export const sectionTitleClass =
   "text-[40px] font-bold tracking-[-0.04em] sm:text-[56px]";
@@ -10,6 +12,7 @@ export const sectionEyebrowClass =
   "text-[17px] font-semibold tracking-tight text-pink";
 
 export const navLinks = [
+  { href: "/#tryouts", label: "Tryouts" },
   { href: "/#team", label: "Team" },
   { href: "/#coaches", label: "Coaches" },
   { href: "/#season", label: "Season" },
@@ -26,10 +29,12 @@ export const clinic = {
 } as const;
 
 export const tryouts = {
-  dates: "10 and 11 December",
+  dates: "10 December",
   time: "7 to 9pm",
-  location: "South Surrey",
-  registrationOpens: "15 October 2026",
+  location: "Xw'epiteng Elementary",
+  address: "18035 8 Ave, Surrey, BC",
+  ages: "U16 girls, born 2011 or later",
+  fee: "$35",
 } as const;
 
 export const coaches = [

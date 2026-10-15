@@ -1,12 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/hero";
+import { ClinicCta } from "@/components/clinic-cta";
 import {
   clubEmail,
   clubName,
   coaches,
+  paymentsEmail,
   sectionEyebrowClass,
   sectionTitleClass,
+  tryoutFormUrl,
+  tryouts,
 } from "@/lib/site";
 
 const pillars = [
@@ -29,25 +33,112 @@ export default function Home() {
     <main id="top">
       <Hero />
 
+      <section id="tryouts" className="bg-ink px-6 py-24 md:py-28">
+        <div className="mx-auto max-w-[980px]">
+          <p className={`text-center ${sectionEyebrowClass}`}>U16. 2026/2027.</p>
+          <h2 className={`mt-2 text-center text-white ${sectionTitleClass}`}>
+            Club tryouts
+          </h2>
+
+          <div className="mt-12 grid gap-4 lg:grid-cols-2">
+            <article className="rounded-3xl bg-white px-8 py-10 text-left">
+              <h3 className="text-[24px] font-bold tracking-[-0.02em] text-ink">
+                The tryout
+              </h3>
+              <dl className="mt-8 space-y-5">
+                <div>
+                  <dt className="text-[13px] font-semibold tracking-tight text-pink">
+                    When
+                  </dt>
+                  <dd className="mt-1 text-[17px] font-semibold text-ink">
+                    Thursday {tryouts.dates}, {tryouts.time}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-[13px] font-semibold tracking-tight text-pink">
+                    Where
+                  </dt>
+                  <dd className="mt-1 text-[17px] font-semibold text-ink">
+                    {tryouts.location}
+                  </dd>
+                  <dd className="mt-1 text-[17px] text-ink/55">
+                    {tryouts.address}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-[13px] font-semibold tracking-tight text-pink">
+                    Who
+                  </dt>
+                  <dd className="mt-1 text-[17px] font-semibold text-ink">
+                    {tryouts.ages}
+                  </dd>
+                </div>
+              </dl>
+            </article>
+
+            <article className="rounded-3xl bg-white px-8 py-10 text-left">
+              <h3 className="text-[24px] font-bold tracking-[-0.02em] text-ink">
+                How to register
+              </h3>
+              <ol className="mt-8 space-y-5 text-[17px] font-semibold text-ink">
+                <li className="flex items-start gap-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ink text-[15px] font-bold text-white">
+                    1
+                  </span>
+                  Fill the form
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ink text-[15px] font-bold text-white">
+                    2
+                  </span>
+                  <span>
+                    Interac {tryouts.fee} to{" "}
+                    <a
+                      href={`mailto:${paymentsEmail}`}
+                      className="underline decoration-pink/50 underline-offset-4"
+                    >
+                      {paymentsEmail}
+                    </a>
+                  </span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ink text-[15px] font-bold text-white">
+                    3
+                  </span>
+                  We confirm by email
+                </li>
+              </ol>
+              {tryoutFormUrl ? (
+                <div className="mt-10">
+                  <ClinicCta href={tryoutFormUrl} external>
+                    Fill the form
+                  </ClinicCta>
+                </div>
+              ) : null}
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section
         id="team"
-        className="flex min-h-[42vh] flex-col items-center justify-center bg-ink px-6 py-24 text-center text-white"
+        className="flex min-h-[42vh] flex-col items-center justify-center bg-cream px-6 py-24 text-center text-ink"
       >
         <p className={sectionEyebrowClass}>{clubName}</p>
         <h2 className={`mt-3 ${sectionTitleClass}`}>Club Teams</h2>
         <div className="mt-14 grid w-full max-w-[720px] gap-4 sm:grid-cols-2">
-          <div className="rounded-3xl bg-white/8 px-8 py-12 text-left">
+          <div className="rounded-3xl bg-white px-8 py-12 text-left">
             <p className="text-[15px] font-semibold tracking-tight text-pink">
               2026/2027
             </p>
             <h3 className="mt-2 text-[40px] font-bold tracking-[-0.04em]">
               U13
             </h3>
-            <p className="mt-3 text-[17px] text-white/45">Coming soon</p>
+            <p className="mt-3 text-[17px] text-ink/45">Coming soon</p>
           </div>
           <Link
             href="/u16"
-            className="rounded-3xl bg-white px-8 py-12 text-left text-ink transition-opacity hover:opacity-90"
+            className="rounded-3xl bg-ink px-8 py-12 text-left text-white transition-opacity hover:opacity-90"
           >
             <p className="text-[15px] font-semibold tracking-tight text-pink">
               2026/2027
@@ -55,7 +146,7 @@ export default function Home() {
             <h3 className="mt-2 text-[40px] font-bold tracking-[-0.04em]">
               U16
             </h3>
-            <p className="mt-3 text-[17px] text-ink/55">View the team</p>
+            <p className="mt-3 text-[17px] text-white/55">View the team</p>
           </Link>
         </div>
       </section>

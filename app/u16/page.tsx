@@ -8,9 +8,11 @@ import {
   clubEmail,
   clubName,
   coaches,
+  paymentsEmail,
   sectionEyebrowClass,
   sectionTitleClass,
   siteUrl,
+  tryoutFormUrl,
   tryouts,
 } from "@/lib/site";
 
@@ -168,19 +170,31 @@ export default function U16Page() {
               </div>
               <div>
                 <dt className="font-semibold text-ink">Where</dt>
-                <dd className="mt-1 text-ink/55">{tryouts.location}</dd>
+                <dd className="mt-1 text-ink/55">
+                  {tryouts.location}
+                  <br />
+                  {tryouts.address}
+                </dd>
               </div>
             </dl>
             <p className="mt-8 text-[17px] leading-7 text-ink/55">
-              Registration opens {tryouts.registrationOpens} on this site.
+              {tryouts.address}. Tryout fee {tryouts.fee} to {paymentsEmail}.
               Registration is required.
             </p>
-            <a
-              href={`mailto:${clubEmail}`}
-              className="mt-8 inline-flex h-12 items-center rounded-full bg-ink px-6 text-[17px] font-bold text-white transition-opacity hover:opacity-85"
-            >
-              Inquire
-            </a>
+            {tryoutFormUrl ? (
+              <div className="mt-8">
+                <ClinicCta href={tryoutFormUrl} external>
+                  Fill the tryout form
+                </ClinicCta>
+              </div>
+            ) : (
+              <a
+                href={`mailto:${clubEmail}`}
+                className="mt-8 inline-flex h-12 items-center rounded-full bg-ink px-6 text-[17px] font-bold text-white transition-opacity hover:opacity-85"
+              >
+                Inquire
+              </a>
+            )}
           </article>
 
           <article className="rounded-3xl bg-cream px-8 py-11">
