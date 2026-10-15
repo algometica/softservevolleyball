@@ -85,7 +85,7 @@ export default function U16Page() {
           <h2 className={`mt-2 text-center text-ink ${sectionTitleClass}`}>
             Coaching team
           </h2>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-3">
             {coaches.map((coach) => (
               <article key={coach.name}>
                 <div className="overflow-hidden rounded-3xl bg-white">
@@ -177,9 +177,15 @@ export default function U16Page() {
                 </dd>
               </div>
             </dl>
-            <p className="mt-8 text-[17px] leading-7 text-ink/55">
-              {tryouts.address}. Tryout fee {tryouts.fee} to {paymentsEmail}.
-              Registration is required.
+            <p className="mt-8 text-[17px] leading-7 break-words text-ink/55">
+              Tryout fee {tryouts.fee} to{" "}
+              <a
+                href={`mailto:${paymentsEmail}`}
+                className="break-all font-semibold text-ink"
+              >
+                {paymentsEmail}
+              </a>
+              . Registration is required.
             </p>
             {tryoutFormUrl ? (
               <div className="mt-8">

@@ -41,7 +41,7 @@ export default function Home() {
           </h2>
 
           <div className="mt-12 grid gap-4 lg:grid-cols-2">
-            <article className="rounded-3xl bg-white px-8 py-10 text-left">
+            <article className="rounded-3xl bg-white px-5 py-8 text-left sm:px-8 sm:py-10">
               <h3 className="text-[24px] font-bold tracking-[-0.02em] text-ink">
                 The tryout
               </h3>
@@ -76,7 +76,7 @@ export default function Home() {
               </dl>
             </article>
 
-            <article className="rounded-3xl bg-white px-8 py-10 text-left">
+            <article className="min-w-0 rounded-3xl bg-white px-5 py-8 text-left sm:px-8 sm:py-10">
               <h3 className="text-[24px] font-bold tracking-[-0.02em] text-ink">
                 How to register
               </h3>
@@ -87,15 +87,15 @@ export default function Home() {
                   </span>
                   Fill the form
                 </li>
-                <li className="flex items-start gap-4">
+                <li className="flex min-w-0 items-start gap-4">
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ink text-[15px] font-bold text-white">
                     2
                   </span>
-                  <span>
-                    Interac {tryouts.fee} to{" "}
+                  <span className="min-w-0">
+                    Interac {tryouts.fee}
                     <a
                       href={`mailto:${paymentsEmail}`}
-                      className="underline decoration-pink/50 underline-offset-4"
+                      className="mt-1 block break-all text-[15px] font-semibold underline decoration-pink/50 underline-offset-4"
                     >
                       {paymentsEmail}
                     </a>
@@ -157,7 +157,7 @@ export default function Home() {
           <h2 className={`mt-2 text-center text-ink ${sectionTitleClass}`}>
             Coaches
           </h2>
-          <div className="mt-12 grid gap-5 sm:grid-cols-3 sm:gap-6">
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
             {coaches.map((coach) => (
               <article
                 key={coach.name}
@@ -210,7 +210,7 @@ export default function Home() {
         </p>
         <a
           href={`mailto:${clubEmail}`}
-          className="mt-8 inline-flex h-12 items-center rounded-full bg-white px-6 text-[17px] font-bold text-ink-soft transition-opacity hover:opacity-85"
+          className="mt-8 inline-flex h-12 max-w-full items-center break-all rounded-full bg-white px-5 text-[15px] font-bold text-ink-soft transition-opacity hover:opacity-85 sm:px-6 sm:text-[17px]"
         >
           {clubEmail}
         </a>

@@ -11,7 +11,7 @@ export function ClinicCta({
   external?: boolean;
 }) {
   const className =
-    "cta-clinic inline-flex h-12 items-center justify-center rounded-full px-7 text-[17px] font-bold tracking-tight";
+    "cta-clinic inline-flex h-12 max-w-full items-center justify-center rounded-full px-6 text-[17px] font-bold tracking-tight sm:px-7";
 
   if (external) {
     return (

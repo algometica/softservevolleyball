@@ -7,11 +7,11 @@ export function Hero() {
     <section className="hero relative flex min-h-[100svh] flex-col justify-center overflow-hidden bg-cream px-6 pb-20 pt-24">
       <div className="relative z-10 mx-auto grid w-full max-w-[1080px] items-center gap-6 md:grid-cols-2 md:gap-10">
         <div className="order-2 text-center md:order-1 md:text-left">
-          <p className={`hero-line hero-line-1 mb-4 ${sectionEyebrowClass}`}>
+          <p className={`hero-line hero-line-1 mb-4 px-1 ${sectionEyebrowClass}`}>
             {clubName}
           </p>
           <h1 className="hero-line hero-line-2 font-bold leading-[0.9] tracking-[-0.05em] text-ink-soft">
-            <span className="block text-[72px] sm:text-[96px] lg:text-[112px]">
+            <span className="block text-[64px] sm:text-[96px] lg:text-[112px]">
               2027
             </span>
             <span className="mt-1 block text-[40px] sm:text-[56px] lg:text-[64px]">

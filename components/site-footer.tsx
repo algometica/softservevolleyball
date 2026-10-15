@@ -14,7 +14,7 @@ export function SiteFooter() {
             height={36}
             className="h-9 w-9 object-contain"
           />
-          <p className="text-[12px] text-white/55">
+          <p className="min-w-0 text-[12px] leading-5 text-white/55">
             © {new Date().getFullYear()} {clubName}
           </p>
         </div>
