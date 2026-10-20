@@ -127,15 +127,18 @@ export default function Home() {
         <p className={sectionEyebrowClass}>{clubName}</p>
         <h2 className={`mt-3 ${sectionTitleClass}`}>Club Teams</h2>
         <div className="mt-14 grid w-full max-w-[720px] gap-4 sm:grid-cols-2">
-          <div className="rounded-3xl bg-white px-8 py-12 text-left">
+          <Link
+            href="/u13"
+            className="rounded-3xl bg-white px-8 py-12 text-left text-ink transition-opacity hover:opacity-90"
+          >
             <p className="text-[15px] font-semibold tracking-tight text-pink">
               2026/2027
             </p>
             <h3 className="mt-2 text-[40px] font-bold tracking-[-0.04em]">
               U13
             </h3>
-            <p className="mt-3 text-[17px] text-ink/45">Coming soon</p>
-          </div>
+            <p className="mt-3 text-[17px] text-ink/55">View the team</p>
+          </Link>
           <Link
             href="/u16"
             className="rounded-3xl bg-ink px-8 py-12 text-left text-white transition-opacity hover:opacity-90"

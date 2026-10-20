@@ -5,6 +5,7 @@ export const siteUrl = "https://supernovavolleyballclub.ca";
 export const instagramUrl = "https://www.instagram.com/supernovavolleyballclub";
 export const clinicRegisterUrl = "https://forms.gle/JkUCnTrKQBxZBiRd7";
 export const tryoutFormUrl = "https://forms.gle/h6WPFHts9xxopxDAA";
+export const u13TryoutFormUrl = "https://forms.gle/gqwQiNfp4yujXH749";
 
 export const sectionTitleClass =
   "text-[40px] font-bold tracking-[-0.04em] sm:text-[56px]";
@@ -36,6 +37,21 @@ export const tryouts = {
   ages: "U16 girls, born 2011 or later",
   fee: "$35",
 } as const;
+
+export const u13Tryouts = {
+  dates: "15 November",
+  day: "Sunday",
+  time: "7 to 8pm",
+  location: "Peace Portal Church",
+  address: "15128 27B Ave, Surrey, BC",
+  ages: "U13 girls, born in 2013",
+  fee: "$35",
+} as const;
+
+export const u13Training = [
+  { day: "Monday", time: "5:30 to 7pm" },
+  { day: "Wednesday", time: "5:30 to 7pm" },
+] as const;
 
 export const coaches = [
   {
