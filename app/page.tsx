@@ -11,6 +11,8 @@ import {
   sectionTitleClass,
   tryoutFormUrl,
   tryouts,
+  u13TryoutFormUrl,
+  u13Tryouts,
 } from "@/lib/site";
 
 const pillars = [
@@ -35,15 +37,18 @@ export default function Home() {
 
       <section id="tryouts" className="bg-ink px-6 py-24 md:py-28">
         <div className="mx-auto max-w-[980px]">
-          <p className={`text-center ${sectionEyebrowClass}`}>U16. 2026/2027.</p>
+          <p className={`text-center ${sectionEyebrowClass}`}>2026/2027</p>
           <h2 className={`mt-2 text-center text-white ${sectionTitleClass}`}>
             Club tryouts
           </h2>
 
           <div className="mt-12 grid gap-4 lg:grid-cols-2">
-            <article className="rounded-3xl bg-white px-5 py-8 text-left sm:px-8 sm:py-10">
-              <h3 className="text-[24px] font-bold tracking-[-0.02em] text-ink">
-                The tryout
+            <article className="min-w-0 rounded-3xl bg-white px-5 py-8 text-left sm:px-8 sm:py-10">
+              <p className="text-[15px] font-semibold tracking-tight text-pink">
+                2026/2027
+              </p>
+              <h3 className="mt-2 text-[40px] font-bold tracking-[-0.04em] text-ink">
+                U13
               </h3>
               <dl className="mt-8 space-y-5">
                 <div>
@@ -51,7 +56,66 @@ export default function Home() {
                     When
                   </dt>
                   <dd className="mt-1 text-[17px] font-semibold text-ink">
-                    Thursday {tryouts.dates}, {tryouts.time}
+                    {u13Tryouts.day} {u13Tryouts.dates}, {u13Tryouts.time}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-[13px] font-semibold tracking-tight text-pink">
+                    Where
+                  </dt>
+                  <dd className="mt-1 text-[17px] font-semibold text-ink">
+                    {u13Tryouts.location}
+                  </dd>
+                  <dd className="mt-1 text-[17px] text-ink/55">
+                    {u13Tryouts.address}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-[13px] font-semibold tracking-tight text-pink">
+                    Who
+                  </dt>
+                  <dd className="mt-1 text-[17px] font-semibold text-ink">
+                    {u13Tryouts.ages}
+                  </dd>
+                </div>
+              </dl>
+              <p className="mt-8 text-[17px] leading-7 text-ink/55">
+                Interac {u13Tryouts.fee} to{" "}
+                <a
+                  href={`mailto:${paymentsEmail}`}
+                  className="break-all font-semibold text-ink"
+                >
+                  {paymentsEmail}
+                </a>
+                . Put the athlete&apos;s name in the notes.
+              </p>
+              <div className="mt-8">
+                <ClinicCta href={u13TryoutFormUrl} external>
+                  Fill the form
+                </ClinicCta>
+              </div>
+              <Link
+                href="/u13"
+                className="mt-4 inline-block text-[15px] font-semibold text-ink/45 transition-colors hover:text-ink"
+              >
+                Team details
+              </Link>
+            </article>
+
+            <article className="min-w-0 rounded-3xl bg-white px-5 py-8 text-left sm:px-8 sm:py-10">
+              <p className="text-[15px] font-semibold tracking-tight text-pink">
+                2026/2027
+              </p>
+              <h3 className="mt-2 text-[40px] font-bold tracking-[-0.04em] text-ink">
+                U16
+              </h3>
+              <dl className="mt-8 space-y-5">
+                <div>
+                  <dt className="text-[13px] font-semibold tracking-tight text-pink">
+                    When
+                  </dt>
+                  <dd className="mt-1 text-[17px] font-semibold text-ink">
+                    {tryouts.day} {tryouts.dates}, {tryouts.time}
                   </dd>
                 </div>
                 <div>
@@ -74,47 +138,27 @@ export default function Home() {
                   </dd>
                 </div>
               </dl>
-            </article>
-
-            <article className="min-w-0 rounded-3xl bg-white px-5 py-8 text-left sm:px-8 sm:py-10">
-              <h3 className="text-[24px] font-bold tracking-[-0.02em] text-ink">
-                How to register
-              </h3>
-              <ol className="mt-8 space-y-5 text-[17px] font-semibold text-ink">
-                <li className="flex items-start gap-4">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ink text-[15px] font-bold text-white">
-                    1
-                  </span>
+              <p className="mt-8 text-[17px] leading-7 text-ink/55">
+                Interac {tryouts.fee} to{" "}
+                <a
+                  href={`mailto:${paymentsEmail}`}
+                  className="break-all font-semibold text-ink"
+                >
+                  {paymentsEmail}
+                </a>
+                . Put the athlete&apos;s name in the notes.
+              </p>
+              <div className="mt-8">
+                <ClinicCta href={tryoutFormUrl} external>
                   Fill the form
-                </li>
-                <li className="flex min-w-0 items-start gap-4">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ink text-[15px] font-bold text-white">
-                    2
-                  </span>
-                  <span className="min-w-0">
-                    Interac {tryouts.fee}
-                    <a
-                      href={`mailto:${paymentsEmail}`}
-                      className="mt-1 block break-all text-[15px] font-semibold underline decoration-pink/50 underline-offset-4"
-                    >
-                      {paymentsEmail}
-                    </a>
-                  </span>
-                </li>
-                <li className="flex items-start gap-4">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-ink text-[15px] font-bold text-white">
-                    3
-                  </span>
-                  We confirm by email
-                </li>
-              </ol>
-              {tryoutFormUrl ? (
-                <div className="mt-10">
-                  <ClinicCta href={tryoutFormUrl} external>
-                    Fill the form
-                  </ClinicCta>
-                </div>
-              ) : null}
+                </ClinicCta>
+              </div>
+              <Link
+                href="/u16"
+                className="mt-4 inline-block text-[15px] font-semibold text-ink/45 transition-colors hover:text-ink"
+              >
+                Team details
+              </Link>
             </article>
           </div>
         </div>
@@ -129,7 +173,7 @@ export default function Home() {
         <div className="mt-14 grid w-full max-w-[720px] gap-4 sm:grid-cols-2">
           <Link
             href="/u13"
-            className="rounded-3xl bg-white px-8 py-12 text-left text-ink transition-opacity hover:opacity-90"
+            className="rounded-3xl bg-ink px-8 py-12 text-left text-white transition-opacity hover:opacity-90"
           >
             <p className="text-[15px] font-semibold tracking-tight text-pink">
               2026/2027
@@ -137,7 +181,7 @@ export default function Home() {
             <h3 className="mt-2 text-[40px] font-bold tracking-[-0.04em]">
               U13
             </h3>
-            <p className="mt-3 text-[17px] text-ink/55">View the team</p>
+            <p className="mt-3 text-[17px] text-white/55">View the team</p>
           </Link>
           <Link
             href="/u16"

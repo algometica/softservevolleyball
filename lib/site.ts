@@ -31,6 +31,7 @@ export const clinic = {
 
 export const tryouts = {
   dates: "10 December",
+  day: "Thursday",
   time: "7 to 9pm",
   location: "Xw'epiteng Elementary",
   address: "18035 8 Ave, Surrey, BC",
@@ -49,8 +50,8 @@ export const u13Tryouts = {
 } as const;
 
 export const u13Training = [
-  { day: "Monday", time: "5:30 to 7pm" },
-  { day: "Wednesday", time: "5:30 to 7pm" },
+  { day: "Monday", time: "5 to 6:30pm" },
+  { day: "Wednesday", time: "5 to 6:30pm" },
 ] as const;
 
 export const coaches = [

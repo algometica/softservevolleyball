@@ -5,7 +5,6 @@ import { ClinicCta } from "@/components/clinic-cta";
 import {
   clinic,
   clinicRegisterUrl,
-  clubEmail,
   clubName,
   coaches,
   paymentsEmail,
@@ -162,7 +161,9 @@ export default function U16Page() {
             <dl className="mt-8 space-y-4 text-[17px]">
               <div>
                 <dt className="font-semibold text-ink">When</dt>
-                <dd className="mt-1 text-ink/55">{tryouts.dates}</dd>
+                <dd className="mt-1 text-ink/55">
+                  {tryouts.day} {tryouts.dates}
+                </dd>
               </div>
               <div>
                 <dt className="font-semibold text-ink">Time</dt>
@@ -176,6 +177,10 @@ export default function U16Page() {
                   {tryouts.address}
                 </dd>
               </div>
+              <div>
+                <dt className="font-semibold text-ink">Who</dt>
+                <dd className="mt-1 text-ink/55">{tryouts.ages}</dd>
+              </div>
             </dl>
             <p className="mt-8 text-[17px] leading-7 break-words text-ink/55">
               Tryout fee {tryouts.fee} to{" "}
@@ -185,22 +190,14 @@ export default function U16Page() {
               >
                 {paymentsEmail}
               </a>
-              . Registration is required.
+              . Put the athlete&apos;s name in the e-transfer notes.
+              Registration is required.
             </p>
-            {tryoutFormUrl ? (
-              <div className="mt-8">
-                <ClinicCta href={tryoutFormUrl} external>
-                  Fill the tryout form
-                </ClinicCta>
-              </div>
-            ) : (
-              <a
-                href={`mailto:${clubEmail}`}
-                className="mt-8 inline-flex h-12 items-center rounded-full bg-ink px-6 text-[17px] font-bold text-white transition-opacity hover:opacity-85"
-              >
-                Inquire
-              </a>
-            )}
+            <div className="mt-8">
+              <ClinicCta href={tryoutFormUrl} external>
+                Fill the tryout form
+              </ClinicCta>
+            </div>
           </article>
 
           <article className="rounded-3xl bg-cream px-8 py-11">

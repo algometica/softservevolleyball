@@ -58,13 +58,6 @@ export default function U13Page() {
             movement, and key volleyball concepts.
           </p>
           <p className="mt-5 text-[19px] leading-8 text-ink/70">
-            Youth physical literacy and functional movement are integrated into
-            every practice to help young athletes build coordination, agility,
-            balance, and court awareness safely. Every drill is structured to
-            maximize active repetitions, boost athletic confidence, and teach
-            proper mechanics from day one.
-          </p>
-          <p className="mt-5 text-[19px] leading-8 text-ink/70">
             In addition to our local coaching team, athletes will receive
             technical guidance under an elite coach from Prague, introducing
             young players early to European technical standards, clean ball
