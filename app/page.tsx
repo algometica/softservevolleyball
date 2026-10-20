@@ -6,13 +6,10 @@ import {
   clubEmail,
   clubName,
   coaches,
-  paymentsEmail,
   sectionEyebrowClass,
   sectionTitleClass,
   tryoutFormUrl,
-  tryouts,
   u13TryoutFormUrl,
-  u13Tryouts,
 } from "@/lib/site";
 
 const pillars = [
@@ -30,6 +27,24 @@ const pillars = [
   },
 ] as const;
 
+const tryoutActions = [
+  { label: "U13 tryout", href: u13TryoutFormUrl },
+  { label: "U16 tryout", href: tryoutFormUrl },
+] as const;
+
+const teamCards = [
+  {
+    age: "U13",
+    href: "/u13",
+    line: "Entry into competitive play.",
+  },
+  {
+    age: "U16",
+    href: "/u16",
+    line: "The elite performance standard.",
+  },
+] as const;
+
 export default function Home() {
   return (
     <main id="top">
@@ -41,125 +56,21 @@ export default function Home() {
           <h2 className={`mt-2 text-center text-white ${sectionTitleClass}`}>
             Club tryouts
           </h2>
-
-          <div className="mt-12 grid gap-4 lg:grid-cols-2">
-            <article className="min-w-0 rounded-3xl bg-white px-5 py-8 text-left sm:px-8 sm:py-10">
-              <p className="text-[15px] font-semibold tracking-tight text-pink">
-                2026/2027
-              </p>
-              <h3 className="mt-2 text-[40px] font-bold tracking-[-0.04em] text-ink">
-                U13
-              </h3>
-              <dl className="mt-8 space-y-5">
-                <div>
-                  <dt className="text-[13px] font-semibold tracking-tight text-pink">
-                    When
-                  </dt>
-                  <dd className="mt-1 text-[17px] font-semibold text-ink">
-                    {u13Tryouts.day} {u13Tryouts.dates}, {u13Tryouts.time}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-[13px] font-semibold tracking-tight text-pink">
-                    Where
-                  </dt>
-                  <dd className="mt-1 text-[17px] font-semibold text-ink">
-                    {u13Tryouts.location}
-                  </dd>
-                  <dd className="mt-1 text-[17px] text-ink/55">
-                    {u13Tryouts.address}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-[13px] font-semibold tracking-tight text-pink">
-                    Who
-                  </dt>
-                  <dd className="mt-1 text-[17px] font-semibold text-ink">
-                    {u13Tryouts.ages}
-                  </dd>
-                </div>
-              </dl>
-              <p className="mt-8 text-[17px] leading-7 text-ink/55">
-                Interac {u13Tryouts.fee} to{" "}
-                <a
-                  href={`mailto:${paymentsEmail}`}
-                  className="break-all font-semibold text-ink"
-                >
-                  {paymentsEmail}
-                </a>
-                . Put the athlete&apos;s name in the notes.
-              </p>
-              <div className="mt-8">
-                <ClinicCta href={u13TryoutFormUrl} external>
-                  Fill the form
-                </ClinicCta>
-              </div>
-              <Link
-                href="/u13"
-                className="mt-4 inline-block text-[15px] font-semibold text-ink/45 transition-colors hover:text-ink"
+          <p className="mx-auto mt-5 max-w-md text-center text-[19px] leading-7 text-white/55">
+            Register for the age group. Dates, gym, and payment are on the form
+            and the team page.
+          </p>
+          <div className="mx-auto mt-10 flex max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:justify-center">
+            {tryoutActions.map((action) => (
+              <ClinicCta
+                key={action.label}
+                href={action.href}
+                external
+                className="w-full sm:w-auto"
               >
-                Team details
-              </Link>
-            </article>
-
-            <article className="min-w-0 rounded-3xl bg-white px-5 py-8 text-left sm:px-8 sm:py-10">
-              <p className="text-[15px] font-semibold tracking-tight text-pink">
-                2026/2027
-              </p>
-              <h3 className="mt-2 text-[40px] font-bold tracking-[-0.04em] text-ink">
-                U16
-              </h3>
-              <dl className="mt-8 space-y-5">
-                <div>
-                  <dt className="text-[13px] font-semibold tracking-tight text-pink">
-                    When
-                  </dt>
-                  <dd className="mt-1 text-[17px] font-semibold text-ink">
-                    {tryouts.day} {tryouts.dates}, {tryouts.time}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-[13px] font-semibold tracking-tight text-pink">
-                    Where
-                  </dt>
-                  <dd className="mt-1 text-[17px] font-semibold text-ink">
-                    {tryouts.location}
-                  </dd>
-                  <dd className="mt-1 text-[17px] text-ink/55">
-                    {tryouts.address}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-[13px] font-semibold tracking-tight text-pink">
-                    Who
-                  </dt>
-                  <dd className="mt-1 text-[17px] font-semibold text-ink">
-                    {tryouts.ages}
-                  </dd>
-                </div>
-              </dl>
-              <p className="mt-8 text-[17px] leading-7 text-ink/55">
-                Interac {tryouts.fee} to{" "}
-                <a
-                  href={`mailto:${paymentsEmail}`}
-                  className="break-all font-semibold text-ink"
-                >
-                  {paymentsEmail}
-                </a>
-                . Put the athlete&apos;s name in the notes.
-              </p>
-              <div className="mt-8">
-                <ClinicCta href={tryoutFormUrl} external>
-                  Fill the form
-                </ClinicCta>
-              </div>
-              <Link
-                href="/u16"
-                className="mt-4 inline-block text-[15px] font-semibold text-ink/45 transition-colors hover:text-ink"
-              >
-                Team details
-              </Link>
-            </article>
+                {action.label}
+              </ClinicCta>
+            ))}
           </div>
         </div>
       </section>
@@ -171,30 +82,23 @@ export default function Home() {
         <p className={sectionEyebrowClass}>{clubName}</p>
         <h2 className={`mt-3 ${sectionTitleClass}`}>Club Teams</h2>
         <div className="mt-14 grid w-full max-w-[720px] gap-4 sm:grid-cols-2">
-          <Link
-            href="/u13"
-            className="rounded-3xl bg-ink px-8 py-12 text-left text-white transition-opacity hover:opacity-90"
-          >
-            <p className="text-[15px] font-semibold tracking-tight text-pink">
-              2026/2027
-            </p>
-            <h3 className="mt-2 text-[40px] font-bold tracking-[-0.04em]">
-              U13
-            </h3>
-            <p className="mt-3 text-[17px] text-white/55">View the team</p>
-          </Link>
-          <Link
-            href="/u16"
-            className="rounded-3xl bg-ink px-8 py-12 text-left text-white transition-opacity hover:opacity-90"
-          >
-            <p className="text-[15px] font-semibold tracking-tight text-pink">
-              2026/2027
-            </p>
-            <h3 className="mt-2 text-[40px] font-bold tracking-[-0.04em]">
-              U16
-            </h3>
-            <p className="mt-3 text-[17px] text-white/55">View the team</p>
-          </Link>
+          {teamCards.map((team) => (
+            <Link
+              key={team.age}
+              href={team.href}
+              className="rounded-3xl bg-ink px-8 py-12 text-left text-white transition-opacity hover:opacity-90"
+            >
+              <p className="text-[15px] font-semibold tracking-tight text-pink">
+                2026/2027
+              </p>
+              <h3 className="mt-2 text-[40px] font-bold tracking-[-0.04em]">
+                {team.age}
+              </h3>
+              <p className="mt-3 text-[17px] leading-7 text-white/55">
+                {team.line}
+              </p>
+            </Link>
+          ))}
         </div>
       </section>
 
