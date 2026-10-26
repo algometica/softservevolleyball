@@ -9,7 +9,7 @@ import {
   sectionEyebrowClass,
   sectionTitleClass,
   tryoutFormUrl,
-  u13TryoutFormUrl,
+  u14TryoutFormUrl,
 } from "@/lib/site";
 
 const pillars = [
@@ -28,14 +28,14 @@ const pillars = [
 ] as const;
 
 const tryoutActions = [
-  { label: "U13 tryout", href: u13TryoutFormUrl },
+  { label: "U14 tryout", href: u14TryoutFormUrl },
   { label: "U16 tryout", href: tryoutFormUrl },
 ] as const;
 
 const teamCards = [
   {
-    age: "U13",
-    href: "/u13",
+    age: "U14",
+    href: "/u14",
     line: "Entry into competitive play.",
   },
   {

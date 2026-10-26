@@ -6,15 +6,15 @@ import {
   sectionEyebrowClass,
   sectionTitleClass,
   siteUrl,
-  u13Training,
-  u13TryoutFormUrl,
-  u13Tryouts,
+  u14Training,
+  u14TryoutFormUrl,
+  u14Tryouts,
 } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "U13 Club Team",
-  description: `${clubName} U13 club pathway in South Surrey. Tryouts ${u13Tryouts.day} ${u13Tryouts.dates}.`,
-  alternates: { canonical: `${siteUrl}/u13` },
+  title: "U14 Club Team",
+  description: `${clubName} U14 club pathway in South Surrey. Tryouts ${u14Tryouts.day} ${u14Tryouts.dates}.`,
+  alternates: { canonical: `${siteUrl}/u14` },
 };
 
 function LocationPin() {
@@ -33,11 +33,11 @@ function LocationPin() {
   );
 }
 
-export default function U13Page() {
+export default function U14Page() {
   return (
     <main id="top">
       <section className="bg-cream px-6 pb-20 pt-28 text-center md:pt-32">
-        <p className={sectionEyebrowClass}>U13. 2026/2027.</p>
+        <p className={sectionEyebrowClass}>U14. 2026/2027.</p>
         <h1 className={`mt-3 text-ink ${sectionTitleClass}`}>
           Entry into competitive play
         </h1>
@@ -50,7 +50,7 @@ export default function U13Page() {
         <div className="mx-auto max-w-[720px]">
           <h2 className={`text-ink ${sectionTitleClass}`}>The pathway</h2>
           <p className="mt-8 text-[19px] leading-8 text-ink/70">
-            Our U13 pathway focuses on establishing strong technical
+            Our U14 pathway focuses on establishing strong technical
             fundamentals, high-volume ball touches, and developing a deep
             passion for organized volleyball. Athletes entering club play will
             build a solid foundation across all core skills: serving, setting,
@@ -71,7 +71,7 @@ export default function U13Page() {
 
       <section className="bg-cream px-6 py-24 md:py-28">
         <div className="mx-auto max-w-[980px] text-center">
-          <p className={sectionEyebrowClass}>U13</p>
+          <p className={sectionEyebrowClass}>U14</p>
           <h2 className={`mt-2 text-ink ${sectionTitleClass}`}>
             Coaching team
           </h2>
@@ -93,7 +93,7 @@ export default function U13Page() {
             Entry into competitive play
           </h2>
           <p className="mt-8 text-[19px] leading-8 text-white/65">
-            The U13 program is designed specifically for young athletes
+            The U14 program is designed specifically for young athletes
             transitioning into organized club volleyball. We emphasize strong
             sport habits, positive communication, and tactical court
             understanding in a supportive, high-energy environment. This
@@ -103,7 +103,7 @@ export default function U13Page() {
             while being exposed to high level play in tournaments.
           </p>
           <p className="mt-5 text-[19px] leading-8 text-white/65">
-            Starting club volleyball at U13 gives young athletes a crucial head
+            Starting club volleyball at U14 gives young athletes a crucial head
             start by installing rock-solid foundational mechanics before
             high-pressure competition sets in. As team rosters and match play
             become exponentially more competitive in the U14, U15, and U16 age
@@ -127,7 +127,7 @@ export default function U13Page() {
             South Surrey
           </p>
           <div className="mx-auto mt-12 grid max-w-[640px] gap-4 sm:grid-cols-2">
-            {u13Training.map((session) => (
+            {u14Training.map((session) => (
               <article
                 key={session.day}
                 className="rounded-3xl bg-white px-6 py-11"
@@ -153,28 +153,28 @@ export default function U13Page() {
               <div>
                 <dt className="font-semibold text-ink">When</dt>
                 <dd className="mt-1 text-ink/55">
-                  {u13Tryouts.day} {u13Tryouts.dates}
+                  {u14Tryouts.day} {u14Tryouts.dates}
                 </dd>
               </div>
               <div>
                 <dt className="font-semibold text-ink">Time</dt>
-                <dd className="mt-1 text-ink/55">{u13Tryouts.time}</dd>
+                <dd className="mt-1 text-ink/55">{u14Tryouts.time}</dd>
               </div>
               <div>
                 <dt className="font-semibold text-ink">Where</dt>
                 <dd className="mt-1 text-ink/55">
-                  {u13Tryouts.location}
+                  {u14Tryouts.location}
                   <br />
-                  {u13Tryouts.address}
+                  {u14Tryouts.address}
                 </dd>
               </div>
               <div>
                 <dt className="font-semibold text-ink">Who</dt>
-                <dd className="mt-1 text-ink/55">{u13Tryouts.ages}</dd>
+                <dd className="mt-1 text-ink/55">{u14Tryouts.ages}</dd>
               </div>
             </dl>
             <p className="mt-8 text-[17px] leading-7 break-words text-ink/55">
-              Tryout fee {u13Tryouts.fee} to{" "}
+              Tryout fee {u14Tryouts.fee} to{" "}
               <a
                 href={`mailto:${paymentsEmail}`}
                 className="break-all font-semibold text-ink"
@@ -185,7 +185,7 @@ export default function U13Page() {
               Registration is required.
             </p>
             <div className="mt-8">
-              <ClinicCta href={u13TryoutFormUrl} external>
+              <ClinicCta href={u14TryoutFormUrl} external>
                 Fill the tryout form
               </ClinicCta>
             </div>
